@@ -356,7 +356,7 @@ int main(int argc, char **argv)
   double rate;
   if (argc < 5) // if they didn't give us command line parameters, die and print out the order
   {
-    printf("!Usage: <this> <N> <dt> <vinit> <pad> <L>\n");
+    printf("!Usage: <this> <N> <dt> <vinit> <L>\n");
     printf("!Try: gas3d 1000 1e-3 0.25 1\n");
     exit(1);
   }
@@ -368,7 +368,7 @@ int main(int argc, char **argv)
   L=atof(argv[4]);
   int drawms=N*80.0/1000.0;
   double smult=0;
-  NG=1.0/(r0*pad);
+  NG=L/(r0*pad);
   printf("!Read parameters. Drawing every %d ms\n",drawms);
   ivec zone[N];
   int lastframe=0;
