@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+
+  <title>Pendulum exercises</title>
+  <meta name="description" content="AAPT WM 2019
+">
+
+  <link rel="stylesheet" href="/picup-workshop/css/main.css">
+  <link rel="canonical" href="/picup-workshop/pendulum.html">
+  <link rel="alternate" type="application/rss+xml" title="PICUP Workshop" href="/picup-workshop/feed.xml">
+
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/picup-workshop/">PICUP Workshop</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/picup-workshop/index.html">Index</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/picup-workshop/pendulum.html">Pendulum exercises</a>
+          
+        
+          
+          <a class="page-link" href="/picup-workshop/perturb.html">Perturbation Theory and Pendula</a>
+          
+        
+          
+          <a class="page-link" href="/picup-workshop/showcase.html">Showcase</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Pendulum exercises</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="overview">Overview</h2>
+
+<p>As an example of an exercise that begins with simple physics (and that you all can code from scratch within this workshop) but that can quickly get into advanced topics, we’ve chosen the simple pendulum.</p>
+
+<p>In this workshop, we imagine that you all will create a pendulum simulation using any tool you like, and then explore one of two paths: either examining the effects of damping and driving, or studying perturbation theory via the breakdown of the small-angle approximation.</p>
+
+<p>Learning Goals:</p>
+
+<ul>
+  <li>To build a computational model of a simple pendulum using the Euler-Cromer algorithm.</li>
+  <li>To produce graphs of the angular displacement and angular velocity of the pendulum as a function of time from the results of the computational model.</li>
+  <li>To assess the accuracy of the computational results of the model.</li>
+  <li>To identify the limitations of the small angle approximation for the pendulum.</li>
+</ul>
+
+<h2 id="the-simple-pendulum">The simple pendulum</h2>
+
+<h3 id="part-1-creating-the-model">Part 1: Creating the model</h3>
+
+<p>Consider a simple pendulum with a point mass $m$ at the end of a string of length $L$. Performing a torque analysis to find the angular acceleration of the system, we find that <script type="math/tex">\frac{d^2\theta}{dt^2} = -\frac{g}{L}\sin \theta</script>.</p>
+
+<p>This equation can be solved analytically only using the small angle approximation $\sin \theta \approx \theta$, in which case $\theta(t) = A \cos (\omega t + \phi)$, with $\omega = \sqrt{g/L}$.</p>
+
+<p>First, solve this numerically using the Euler-Cromer method, and generate a plot of $\theta(t)$ vs. $t$</p>
+
+<ul>
+  <li>$\omega_{n} = \omega_{n-1} + \alpha_{n-1} \Delta t$</li>
+  <li>$\theta_{n} = \theta_{n-1} + \omega_n \Delta t$.</li>
+</ul>
+
+<p>Use the following parameters:</p>
+
+<ul>
+  <li>Mass: $m = 1 {\rm kg}$</li>
+  <li>Length: $L = 1 \rm m$</li>
+  <li>Gravitational acceleration: $g = 9.81 \rm m/\rm s^2$</li>
+</ul>
+
+<p>and the following initial conditions:</p>
+
+<ul>
+  <li>Initial angular displacement: $A=\theta_0=0.1$ radian</li>
+  <li>Initial angular velocity: $\omega_0 = 0$</li>
+  <li>Time step: $\Delta t = 1 \rm s$</li>
+</ul>
+
+<p>Change $\Delta t$ to smaller values until the solution converges (i.e. it does not change significantly as you make $\Delta t$ smaller).</p>
+
+<p>You can do this in any tool you like. For those who’d like to do this in a spreadsheet, there is a <a href="DampedDrivenPendulumTemplate.xlsx">spreadsheet template</a>. If you’d like to do this in Glowscript (a web-based version of Visual Python), there is
+a Trinket below.</p>
+
+<iframe src="https://trinket.io/embed/glowscript/afb30d4fc5" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
+
+<p>From here, you can either continue with Parts 2 and 3 below to investigate the effects of the damped driven pendulum, or investigate the details of how the small-angle approximation breaks down and how this relates to <a href="perturb.html">perturbation theory</a>.</p>
+
+<h3 id="part-2-adding-damping">Part 2: Adding damping</h3>
+
+<p>Friction and air resistance can be included as a damping term, which is proportional to the angular velocity: $\alpha_{\rm damp} = - \frac{b}{mL^2}\omega$, where $b$ is a constant that characterizes the damping effects.</p>
+
+<ol>
+  <li>Modify your angular acceleration to include this term. Use $b = 0.2\, {\rm kg}\, {\rm m^2/\rm s}$, then plot $\theta(t)$ vs. $t$.</li>
+  <li>How many oscillations will it take for the amplitude to decrease to $1/e$ of its initial value?</li>
+</ol>
+
+<h3 id="part-3-adding-driving">Part 3: Adding driving</h3>
+
+<p>The pendulum can be driven by a sinusoidal torque, which will add a third term (this one positive) to the angular acceleration:</p>
+
+<p>$\alpha_{\rm drive} = \frac{\tau_d}{mL^2} \cos (\omega_d t)$</p>
+
+<ol>
+  <li>Modify your angular acceleration to include this term. Use $\omega_d = 1$ rad/s and $\tau_d$ = 0.3 Nm, then plot $\theta(t)$ vs $t$ for at least five oscillations.</li>
+  <li>Using the small angle approximation, the natural angular frequency of this system is $\omega_0=\sqrt{g/L}$. What happens to the amplitude of the oscillations when the driving frequency is…
+    <ul>
+      <li>$0.5\omega_0$?</li>
+      <li>$0.9\omega_0$?</li>
+      <li>$1.0\omega_0$?</li>
+      <li>$1.1\omega_0$?</li>
+    </ul>
+  </li>
+</ol>
+
+<p>If you’re done with this, you can investigate the <a href="perturb.html">perturbation-theory exercises</a>.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>PICUP Workshop</li>
+          <li><a href="mailto:wafreema@syr.edu">wafreema@syr.edu</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>AAPT WM 2019
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

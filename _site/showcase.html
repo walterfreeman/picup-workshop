@@ -8,11 +8,12 @@
 
   <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
 
-  <title>First class, August 30</title>
-  <meta name="description" content="My goals for today:">
+  <title>Showcase</title>
+  <meta name="description" content="AAPT WM 2019
+">
 
   <link rel="stylesheet" href="/picup-workshop/css/main.css">
-  <link rel="canonical" href="/picup-workshop/update/2016/08/16/welcome-to-jekyll.html">
+  <link rel="canonical" href="/picup-workshop/showcase.html">
   <link rel="alternate" type="application/rss+xml" title="PICUP Workshop" href="/picup-workshop/feed.xml">
 
 <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
@@ -89,23 +90,45 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">First class, August 30</h1>
-    <p class="post-meta"><time datetime="2016-08-16T07:30:38-04:00" itemprop="datePublished">Aug 16, 2016</time></p>
+    <h1 class="post-title">Showcase</h1>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
-    <p>My goals for today:</p>
+  <div class="post-content">
+    <p>Here are links to some of the upper-division projects we’ve showed. Walter’s sample codes use the <code class="highlighter-rouge">anim</code> animation tool, available for Linux or Mac <a href="https://walterfreeman.github.io/anim.tar">here</a>.</p>
+
+<h3 id="quantum-wave-packet">Quantum wave packet</h3>
+
+<p>When I (Walter) was an undergraduate I never quite understood how the Schroedinger equation replicated classical behavior. Sure, I wrote the equations down for expectation values and so forth, but I wish I’d gotten to do this assignment (written by Larry):</p>
+
+<p>The assignment <a href="wavepacket-assignment.pdf">[PDF]</a></p>
+
+<p><a href="wavepacket-template.html">A viewable HTML template</a> (for those without Jupyter)</p>
+
+<p><a href="wavepacket.ipynb">Jupyter notebook</a></p>
+
+<h3 id="nonlinear-vibrating-string-uses-anim">Nonlinear vibrating string (uses <code class="highlighter-rouge">anim</code>)</h3>
+
+<p>In the computational physics course at Syracuse, the nonlinear swinging pendulum is just a warmup for the nonlinear vibrating string. It turns out there’s a lot of physics here that most of us don’t get a chance to study – and the musicians don’t know either!</p>
+
+<p>This project is actually online as a <a href="https://www.compadre.org/PICUP/exercises/exercise.cfm?I=151&amp;A=vibrating-string">PICUP Exercise Set</a>. Or, you can see the version I’ve assigned my students. It’s online in two parts – see <a href="https://walterfreeman.github.io/phys307/projects/string-1.pdf">part 1</a> and <a href="https://walterfreeman.github.io/phys307/projects/string-2.pdf">part 2</a>.</p>
+
+<p>Here is the C++ code that shows <a href="string-parallel.cpp">many strings oscillating at once</a>, or the simpler (and faster) C code that animates only <a href="string-plot.c">one at a time</a>; these generate the plots of period shift vs. amplitude.</p>
+
+<p>Here’s some Python code that simulates <a href="stringparallel.py">multiple strings at once.</a> It doesn’t measure the period, but is an illustration of how to do this with NumPy.</p>
+
+<h3 id="thermodynamics-of-the-lennard-jones-gasuses-anim">Thermodynamics of the Lennard-Jones gas(uses <code class="highlighter-rouge">anim</code>)</h3>
+
+<p>To compile the Lennard-Jones gas simulation, you’ll need two files:</p>
 
 <ul>
-  <li>discuss what computational physics is about</li>
-  <li>introduce you to the folks teaching this class</li>
-  <li>ensure everyone can log into the course computer</li>
-  <li>introduce some basic Linux commands and the C programming language</li>
-  <li>guide everyone through writing their first C program!</li>
+  <li>the <a href="gas3d.cpp">main code</a></li>
+  <li>a small <a href="vector.h">vector library header file</a></li>
 </ul>
+
+<p>Download these and put them in the same directory, then compile with <code class="highlighter-rouge">g++</code> as usual.</p>
 
   </div>
 
