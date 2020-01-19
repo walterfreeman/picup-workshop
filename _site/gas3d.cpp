@@ -350,13 +350,13 @@ int main(int argc, char **argv)
   ilist1=(int *)malloc(sizeof(int) * ilist_size);
   ilist2=(int *)malloc(sizeof(int) * ilist_size);
   r2list=(double *)malloc(sizeof(double) * ilist_size);
-  double thermo_interval=10;
+  double thermo_interval=5;
   double next_thermo=thermo_interval;
   double Taccum=0;
   double rate;
   if (argc < 5) // if they didn't give us command line parameters, die and print out the order
   {
-    printf("!Usage: <this> <N> <dt> <vinit> <pad> <L>\n");
+    printf("!Usage: <this> <N> <dt> <vinit> <L>\n");
     printf("!Try: gas3d 1000 1e-3 0.25 1\n");
     exit(1);
   }
@@ -366,9 +366,9 @@ int main(int argc, char **argv)
   dt=atof(argv[2]);
   vinit=atof(argv[3]);
   L=atof(argv[4]);
-  int drawms=N*80.0/1000.0;
+  int drawms=N*50.0/1000.0;
   double smult=0;
-  NG=1.0/(r0*pad);
+  NG=L/(r0*pad);
   printf("!Read parameters. Drawing every %d ms\n",drawms);
   ivec zone[N];
   int lastframe=0;
@@ -409,7 +409,7 @@ int main(int argc, char **argv)
   for (double t=0; 1; t+=dt)
   {
        starttimer(9);
-   if (istime2(4000))
+   if (istime2(1000))
      {
        KE=kinetic(v,m);
        PE=potential(pos);

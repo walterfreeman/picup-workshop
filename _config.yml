@@ -9,7 +9,7 @@
 title: PICUP Workshop
 email: wafreema@syr.edu 
 description: > # this means to ignore newlines until "baseurl:"
-  AAPT WM 2019
+  AAPT WM 2020
 baseurl: "/picup-workshop" # the subpath of your site, e.g. /blog
 #url: "http://yourdomain.com" # the base hostname & protocol for your site
 #twitter_username: jekyllrb

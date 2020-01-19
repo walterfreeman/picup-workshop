@@ -28,9 +28,9 @@ Here is the C++ code that shows <a href="string-parallel.cpp">many strings oscil
 
 Here's some Python code that simulates <a href="stringparallel.py">multiple strings at once.</a> It doesn't measure the period, but is an illustration of how to do this with NumPy.
 
-### Fermi-Dirac statistics
+### Heat conduction
 
-<a href="fermi-dirac.pdf">Marie Lopez del Puerto's assignment on Fermi-Dirac statistics</a> and <a href="fermi-dirac.m">code to implement it</a> in MATLAB.
+Here's Kelly Roos' simulation of <a href="heat_equation_2D_source.m">heat conduction in 2D</a> in MATLAB.
 
 ### Thermodynamics of the Lennard-Jones gas(uses `anim`)
 

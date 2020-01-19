@@ -350,7 +350,7 @@ int main(int argc, char **argv)
   ilist1=(int *)malloc(sizeof(int) * ilist_size);
   ilist2=(int *)malloc(sizeof(int) * ilist_size);
   r2list=(double *)malloc(sizeof(double) * ilist_size);
-  double thermo_interval=10;
+  double thermo_interval=5;
   double next_thermo=thermo_interval;
   double Taccum=0;
   double rate;
@@ -366,7 +366,7 @@ int main(int argc, char **argv)
   dt=atof(argv[2]);
   vinit=atof(argv[3]);
   L=atof(argv[4]);
-  int drawms=N*80.0/1000.0;
+  int drawms=N*50.0/1000.0;
   double smult=0;
   NG=L/(r0*pad);
   printf("!Read parameters. Drawing every %d ms\n",drawms);
@@ -409,7 +409,7 @@ int main(int argc, char **argv)
   for (double t=0; 1; t+=dt)
   {
        starttimer(9);
-   if (istime2(4000))
+   if (istime2(1000))
      {
        KE=kinetic(v,m);
        PE=potential(pos);

@@ -12,7 +12,7 @@ An outline of the workshop:
 
 ### 1. Introduction to PICUP
 
-<a href="AAPT_Winter_2019_UpperLevel.pptx">Introduction to PICUP slides (Marie Lopez del Puerto's talk)</a>
+<a href="AAPT_Winter_2020_UpperLevel.pptx">Introduction to PICUP slides (Kelly Roos' talk)</a>
 
 Some resources:
 
