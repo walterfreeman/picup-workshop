@@ -74,7 +74,7 @@ Then, whatever tool you're using, investigate what happens as the amplitude beco
 ### Part 2: quantitatively measuring the period
 
  Modify the condition on the while loop: how can you make the pendulum stop after one-half swing?
- The code in the below Trinket will now print out the period and end. How does the period depend on the amplitude?
+ The code in the above Trinket will then print out the period and end. How does the period depend on the amplitude?
 
 
 ### Part 3a (if you have plenty of time and want to hack yourself): period vs. amplitude
