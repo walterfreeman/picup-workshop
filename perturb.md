@@ -1,7 +1,6 @@
 ---
 layout: page
 permalink: perturb.html
-category: top
 title: Perturbation Theory and Pendula
 use_math: true
 ---

@@ -1,7 +1,6 @@
 ---
 layout: page
 permalink: showcase.html
-category: top
 title: Showcase 
 use_math: true
 ---

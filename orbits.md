@@ -1,8 +1,8 @@
 ---
 layout: page
-permalink: pendulum.html
+permalink: orbits.html
 category: top
-title: Pendulum exercises  
+title: Orbital dynamics 
 use_math: true
 ---
 

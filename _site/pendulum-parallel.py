@@ -1,5 +1,5 @@
 from numpy import *
-from matplotlib.pyplot import *
+#from matplotlib.pyplot import *
 
 dt=0.01
 g=9.8

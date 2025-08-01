@@ -1,7 +1,6 @@
 ---
 layout: page
 permalink: pendulum.html
-category: top
 title: Pendulum exercises  
 use_math: true
 ---
