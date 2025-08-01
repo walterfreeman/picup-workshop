@@ -6,7 +6,7 @@ title: Index
 use_math: true
 ---
 
-Welcome to the PICUP upper-level workshop! 
+Welcome to the PICUP computational physics pedagogy workshop!
 
 An outline of the workshop:
 
@@ -18,19 +18,27 @@ Some resources:
 
 <a href="http://eepurl.com/cGZQzb">Join PICUP</a> 
 
-<a href="gopicup.slack.com">PICUP Slack channel</a>
-
 <a href="https://www.compadre.org/picup/">PICUP website</a>
 
-### 2. Group-work: simulating pendula
+### 2. Group-work: orbital dynamics in Trinket/Glowscript
 
-After the introduction, we have in mind that you all will spend a little time on an exercise involving a <a href="pendulum.html">computer simulation of a pendulum</a>, and either study the effects of damping and driving (on the same page) or look at how
-computational physics can be used to teach early-career students the basics of <a href="perturb.html">perturbation theory through the nonlinearities in the pendulum</a>.
+After the introduction, we'd like you to do a short exercise on <a href="orbits.html">orbital dynamics</a>. This will illustrate the use of Glowscript/Trinket,
+a browser-based VPython interpreter.
 
-### 3. <a href="showcase.html">Showcase of upper-division projects</a>
+### 3. Group-work: simulating pendula in Google Colab
 
-### 4. Authoring exercise sets
+Now, we'll do an exercise involving a computer simulation of a pendulum in Google Colab. One of the great things about Colab is the ability to mix
+text and code, so the whole exercise and its instructions are <a href="https://colab.research.google.com/drive/1OaMP6_hD4vUSBC5XotKPP-eGQfnePucL?usp=sharing">in that notebook itself</a>. You will need to "Make a Copy" of the notebook for yourself so you can edit your own version.
 
-Have a nifty exercise that you do with your students that you'd like to post to the <a href="https://www.compadre.org/PICUP/exercises/">PICUP exercise set collection</a>? We'll tell you how to submit it for publication.
+### 4. Discussion
 
+We'll conclude with a discussion of how computational tools can:
 
+* ... help students learn the same kinds of things we were already teaching them, but more quickly and deeply
+* ... allow students to learn new things we weren't able to teach them before
+
+We might also explore:
+
+* ... what you think about the "minimally-working code" approach to computational integration and its strengths and weaknesses
+* ... what you think about spreadsheets, Trinket/Glowscript, Google Colab/Jupyter, and other programming environments
+* ... any thoughts you have about the use of AI in physics education or programming
