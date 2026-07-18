@@ -6,13 +6,48 @@ title: Index
 use_math: true
 ---
 
-Welcome to the PICUP computational physics pedagogy workshop!
+Welcome to the PICUP workshop on AI in computational physics!
 
 An outline of the workshop:
 
-### 1. Introduction to PICUP
+### Session 1a. An introduction to AI itself
 
-SLIDES GO HERE 
+Todd will discuss what AI is, what a large language model is and how it works, and how it can collaborate with you and your computer to write, run, and test code.
+
+### Session 1b. A demonstration of agentic programming
+
+Walter will give a live demonstration of agentic programming, showing how a harness allows a human, a local computer, and a remote LLM can collaborate to do computational
+physics.
+
+### Session 2. Pondering the role of AI in your class
+
+We'll split into groups and discuss the various choices you will need to make about what role AI can play in your classes. 
+
+* How should students be using AI tools to help them write code? 
+* How should students be using AI tools to help them do physics?
+* How do you write a policy to tell the students how they should and shouldn't interact with the robots?
+* How do you write a policy to tell the robots how they should and shouldn't interact with the students?
+* How will assessment work?
+
+### Session 3. The AI ecosystem
+
+We'll discuss what models are out there, what harnesses you can use to work with them, and the various ways to get access to this capability. What do you have to pay for,
+what's free, and what systems will it run on? How did humanity get this capability, anyway?
+
+### Session 4. Doing an exercise with AI help
+
+As our main working session, we'd like you to complete an exercise with the help of an AI, using the same rules and system prompt (if applicable) that you would have your class
+do.
+
+A few choices, from simplest to most involved:
+
+* Projectile motion with and without drag
+* Linear and nonlinear oscillators: the swinging pendulum
+* Orbital dynamics of two and three bodies
+* Nonlinearities in the vibrating string
+* Dynamics of the Lennard-Jones gas
+
+
 
 Some resources:
 

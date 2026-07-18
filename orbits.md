@@ -8,49 +8,35 @@ use_math: true
 
 ## Overview
 
-As an example of a computational exercise that you might do in an introductory course, and to illustrate a few approaches to computation that you might
-use with students, we'd like to show you a short exercise with orbital mechanics and Keplerian orbits.
+As an example of a computational exercise that you might do in an introductory course and that is calibrated to be completed without that much LLM help,
+let's look at planetary orbits. This will be particularly interesting as a playground for how well system prompt guardrails work -- if you want AI
+to help students with programming but explicitly not computational science or physics.
 
-Learning Goals:
+### Part 1: Building the model
 
-* Reflect on how computation can "unlock" a greater variety of topics, systems, and physics in intro courses 
-* Consider the "minimally working code" approach: what do you write for your students, and what do they write themselves?
-* Make a numerical model of planetary orbits in Glowscript/Trinket 
-* Reflect on what sort of physics students might learn from it 
+Write some code that simulates and animates planetary orbits around a star. Instead of using SI units here, use sensible units for simulating things in our 
+Solar System: AU for distance, years for time, and solar masses for mass.
+
+In these units, what is the value of G?
+
+Test your model by simulating an Earthlike orbit. (You will need to think about the initial conditions to use for Earth.) Does it behave like we know Earth's orbit does?
+
+### Part 2: Testing Kepler's laws
+
+Now verify Kepler's laws for your planet. Each law has a qualitative and a quantitative thing you can test. For the quantitative tests, make numerical measurements
+on your simulation and determine to what precision your simulation follows Kepler's laws. (Why are they not followed perfectly?)
+
+* Kepler's first law:
+  * Qualitative: Are the orbits elliptical?
+  * Quantitative: Do the orbits close precisely?
+* Kepler's second law:
+  * Qualitative: Does the planet go faster when it is closer to the Sun?
+  * Quantitative: "Equal areas in equal times" is just a geometric way of phrasing the conservation of angular momentum. To what precision does your simulation conserve angular momentum?
+* Kepler's third law:
+  * Qualitative only: How closely do your orbits follow the square/cube law?
 
 
-## Newtonian gravity and Keplerian orbits in intro courses 
+### Part 3: An extension
 
-### Part 1: Reflection (5 minutes)
-
-Discuss the following with your groups:
-
-* What do you teach your students about Newtonian gravity in intro courses? 
-* What do you teach your students about orbital dynamics in intro courses?
-* Is there more to the story that you'd like them to learn about orbital dynamics? Why *don't* you cover everything you'd like?
-
-### Part 2: Creating the model (30 minutes)
-
-Here is a "minimally working code" in Trinket, a browser-based VPython interpreter.
-
-<iframe src="https://trinket.io/embed/glowscript/59498eaabd9f" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
-You can use the "fullscreen" button here to maximize this. Complete the missing pieces to make a complete orbit simulator. Modify the code and add 
-features as you want!
-
-If you have questions about how to do things or need help debugging, ask us -- or ask your favorite large language model!
-
-### Part 3: Integration into your courses (15 minutes)
-
-Discuss the following with your groups:
-
-* What do you think about the "minimally working code" approach? Would you add things to this skeleton? Would you take things away?
-* What purpose could this exercise serve in your intro courses? What would students learn from it?
-* How could it be modified or extended to connect to more physics ideas (beyond "make the orbit go"?)
-* How is this different than what you'd teach using just pencil and paper?
-
-If you'd like some inspiration, here's a version I made with more features. Might it be useful to just provide this version or something like it to students directly?
-
-<iframe src="https://trinket.io/embed/glowscript/dd0a0107d926" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
-### Part 4: Group discussion
+Replace your star with a binary star. Verify that a planet orbiting a binary star far away follows Kepler's laws, and explore their breakdown as the planet gets closer to the
+stars. Can you quantify the extent to which Kepler's laws break down as the size of the planetary orbit decreases? How does the eccentricity of the stars' orbit and the planet's orbit affect this?
