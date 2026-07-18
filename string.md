@@ -2,6 +2,7 @@
 layout: page
 permalink: string.html 
 title: Nonlinear vibrating string 
+category: top
 use_math: true
 ---
 
@@ -10,6 +11,9 @@ use_math: true
 Here's an exercise that might be sophomore or junior-level depending on how much help students get from their LLMs. 
 This is a good stress test of your system prompts -- have you calibrated them so that the LLM will help the students with the things you want,
 but avoid doing things for them that you want them to learn on their own?
+
+Note that you will probably not have time to write the code for this project yourself in an hour and a half unless you are a very experienced programmer.
+The robots can do it quickly, though!
 
 ### Part 1: Modeling a vibrating string
 
@@ -22,7 +26,7 @@ Write computer code to simulate and animate the motion of such a system.
 
 At low amplitude, an ideal vibrating string is linear with independent normal modes which do not couple. The $n$'th transverse normal mode has period
 
-$$\tau_n = \frac{2L}{nv} = \frac{2L}{n} \sqrt{\frac{\mu}{T}$$
+$\tau_n = \frac{2L}{nv} = \frac{2L}{n} \sqrt{\frac{\mu}{T}}$
 
 where $\mu$ is the linear mass density of the string and $T$ is the tension it is subjected to.
 

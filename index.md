@@ -41,43 +41,9 @@ do.
 
 A few choices, from simplest to most involved:
 
-* Projectile motion with and without drag
-* Linear and nonlinear oscillators: the swinging pendulum
-* Orbital dynamics of two and three bodies
-* Nonlinearities in the vibrating string
-* Dynamics of the Lennard-Jones gas
+* [Projectile motion with and without drag](projectile.html) -- This is an introductory exercise that beginning students might do with little LLM assistance.
+* [Orbital dynamics of two and three bodies](orbits.html) -- As an example of a computational exercise that you might do in an introductory course and that is calibrated to be completed without that much LLM help, let's look at planetary orbits. This will be particularly interesting as a playground for how well system prompt guardrails work -- if you want AI to help students with programming but explicitly not computational science or physics.
+* [Linear and nonlinear oscillators: the swinging pendulum](pendulum.html) -- This exercise begins with simple physics but that can quickly get into advanced topics. This exercise is one of my favorites; we're extending it a little bit given the fact that you all will be doing it with LLM help this time.
+* [Nonlinearities in the vibrating string](string.html) -- This might be sophomore or junior-level depending on how much help students get from their LLMs. This is a good stress test of your system prompts -- have you calibrated them so that the LLM will help the students with the things you want, but avoid doing things for them that you want them to learn on their own?
+* [Dynamics of the Lennard-Jones gas](lj.html) -- This is a "graduate-level" exercise set without LLM help: mapping the phase diagram of the truncated Lennard-Jones gas. It will likely require substantial LLM assistance to code in an hour and a half, and it is probably a good demo of the physics you can learn without actually writing the code yourself. 
 
-
-
-Some resources:
-
-<a href="http://eepurl.com/cGZQzb">Join PICUP</a> 
-
-<a href="https://www.compadre.org/picup/">PICUP website</a>
-
-### 2. Group work: projectile motion with drag in spreadsheets
-
-LINK GOES HERE
-
-### 3. Group work: orbital dynamics in Trinket/Glowscript
-
-After the introduction, we'd like you to do a short exercise on <a href="orbits.html">orbital dynamics</a>. This will illustrate the use of Glowscript/Trinket,
-a browser-based VPython interpreter.
-
-### 4. Group work: simulating pendula in Google Colab
-
-Now, we'll do an exercise involving a computer simulation of a pendulum in Google Colab. One of the great things about Colab is the ability to mix
-text and code, so the whole exercise and its instructions are <a href="https://colab.research.google.com/drive/1OaMP6_hD4vUSBC5XotKPP-eGQfnePucL?usp=sharing">in that notebook itself</a>. You will need to "Make a Copy" of the notebook for yourself so you can edit your own version.
-
-### 4. Discussion
-
-We'll conclude with a discussion of how computational tools can:
-
-* ... help students learn the same kinds of things we were already teaching them, but more quickly and deeply
-* ... allow students to learn new things we weren't able to teach them before
-
-We might also explore:
-
-* ... what you think about the "minimally-working code" approach to computational integration and its strengths and weaknesses
-* ... what you think about spreadsheets, Trinket/Glowscript, Google Colab/Jupyter, and other programming environments
-* ... any thoughts you have about the use of AI in physics education or programming

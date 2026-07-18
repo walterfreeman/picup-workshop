@@ -1,0 +1,11 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Bundler: local gem install path (see .bundle/config)
+vendor/
+.bundle/
+
+*.swp
